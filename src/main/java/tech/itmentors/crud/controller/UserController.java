@@ -67,7 +67,7 @@ public class UserController {
         return "redirect:/admin";
     }
 
-    @DeleteMapping("user/delete/{id}")
+    @PostMapping("user/delete/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String delete(@PathVariable long id) {
         userService.deleteById(id);
