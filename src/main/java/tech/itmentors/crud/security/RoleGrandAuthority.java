@@ -15,4 +15,9 @@ public class RoleGrandAuthority implements GrantedAuthority {
     public String getAuthority() {
         return role.getName();
     }
+
+    public Role getRole() {
+        return role;
+    }
+
 }

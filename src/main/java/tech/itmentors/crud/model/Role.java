@@ -52,5 +52,9 @@ public class Role {
         this.users = users;
     }
 
+    @Override
+    public String toString() {
+        return getName().replace("ROLE_", "");
+    }
 
 }
