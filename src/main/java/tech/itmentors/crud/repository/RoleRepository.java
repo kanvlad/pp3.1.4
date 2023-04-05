@@ -1,4 +1,4 @@
-package tech.itmentors.crud.dao;
+package tech.itmentors.crud.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import tech.itmentors.crud.model.Role;

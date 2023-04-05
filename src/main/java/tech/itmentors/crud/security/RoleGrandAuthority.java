@@ -19,5 +19,4 @@ public class RoleGrandAuthority implements GrantedAuthority {
     public Role getRole() {
         return role;
     }
-
 }

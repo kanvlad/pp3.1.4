@@ -1,8 +1,6 @@
 package tech.itmentors.crud.security;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import tech.itmentors.crud.model.Role;
 import tech.itmentors.crud.model.User;
@@ -23,7 +21,7 @@ public class UserDetailsImpl implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<Role> roles = user.getRoles();
         List<GrantedAuthority> authorities = new ArrayList<>();
-        for (Role role: roles) {
+        for (Role role : roles) {
             authorities.add(new RoleGrandAuthority(role));
         }
         return authorities;
