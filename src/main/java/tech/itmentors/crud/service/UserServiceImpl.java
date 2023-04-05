@@ -1,16 +1,13 @@
-package ru.itmentor.spring.boot_security.demo.service;
-
+package tech.itmentors.crud.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.*;
-import ru.itmentor.spring.boot_security.demo.dao.UserRepository;
-import ru.itmentor.spring.boot_security.demo.entity.User;
-
+import org.springframework.stereotype.Service;
+import tech.itmentors.crud.dao.UserRepository;
+import tech.itmentors.crud.model.User;
 
 import java.util.List;
 import java.util.Optional;
-
 
 @Service
 public class UserServiceImpl implements UserService {

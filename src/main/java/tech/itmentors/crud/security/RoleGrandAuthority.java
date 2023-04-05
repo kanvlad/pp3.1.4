@@ -1,7 +1,7 @@
-package ru.itmentor.spring.boot_security.demo.security;
+package tech.itmentors.crud.security;
 
 import org.springframework.security.core.GrantedAuthority;
-import ru.itmentor.spring.boot_security.demo.entity.Role;
+import tech.itmentors.crud.model.Role;
 
 public class RoleGrandAuthority implements GrantedAuthority {
 
@@ -11,9 +11,6 @@ public class RoleGrandAuthority implements GrantedAuthority {
         this.role = role;
     }
 
-    /**
-     * @return
-     */
     @Override
     public String getAuthority() {
         return role.getName();

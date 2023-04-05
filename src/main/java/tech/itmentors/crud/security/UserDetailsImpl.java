@@ -1,10 +1,11 @@
-package ru.itmentor.spring.boot_security.demo.security;
+package tech.itmentors.crud.security;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import ru.itmentor.spring.boot_security.demo.entity.Role;
-import ru.itmentor.spring.boot_security.demo.entity.User;
+import tech.itmentors.crud.model.Role;
+import tech.itmentors.crud.model.User;
 
 import java.util.ArrayList;
 import java.util.Collection;

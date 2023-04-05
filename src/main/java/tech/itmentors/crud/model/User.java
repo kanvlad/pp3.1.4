@@ -1,4 +1,4 @@
-package ru.itmentor.spring.boot_security.demo.entity;
+package tech.itmentors.crud.model;
 
 import javax.persistence.*;
 import java.util.Collection;

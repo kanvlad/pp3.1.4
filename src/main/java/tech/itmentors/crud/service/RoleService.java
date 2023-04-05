@@ -1,6 +1,6 @@
-package ru.itmentor.spring.boot_security.demo.service;
+package tech.itmentors.crud.service;
 
-import ru.itmentor.spring.boot_security.demo.entity.Role;
+import tech.itmentors.crud.model.Role;
 
 import java.util.List;
 

@@ -1,6 +1,9 @@
-package ru.itmentor.spring.boot_security.demo.entity;
+package tech.itmentors.crud.model;
+
+import org.hibernate.engine.internal.Cascade;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity

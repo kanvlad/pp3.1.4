@@ -1,21 +1,18 @@
-package ru.itmentor.spring.boot_security.demo.controller;
-
+package tech.itmentors.crud.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import ru.itmentor.spring.boot_security.demo.entity.Role;
-import ru.itmentor.spring.boot_security.demo.entity.User;
-import ru.itmentor.spring.boot_security.demo.security.UserDetailsImpl;
-import ru.itmentor.spring.boot_security.demo.service.RoleService;
-import ru.itmentor.spring.boot_security.demo.service.UserService;
+import tech.itmentors.crud.model.Role;
+import tech.itmentors.crud.model.User;
+import tech.itmentors.crud.security.UserDetailsImpl;
+import tech.itmentors.crud.service.RoleService;
+import tech.itmentors.crud.service.UserService;
 
 import java.util.List;
-
 
 @Controller
 public class UserController {
@@ -34,9 +31,6 @@ public class UserController {
     public String showUserInfo(ModelMap model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-
-        System.out.println(userDetails.getUser());
-
         User user = userDetails.getUser();
         model.addAttribute("user", user);
 
@@ -86,4 +80,3 @@ public class UserController {
         return "redirect:/admin";
     }
 }
-

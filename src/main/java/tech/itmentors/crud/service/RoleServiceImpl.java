@@ -1,13 +1,14 @@
-package ru.itmentor.spring.boot_security.demo.service;
+package tech.itmentors.crud.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.itmentor.spring.boot_security.demo.dao.RoleRepository;
-import ru.itmentor.spring.boot_security.demo.entity.Role;
+import tech.itmentors.crud.dao.RoleRepository;
+import tech.itmentors.crud.model.Role;
 
 import java.util.List;
+
 @Service
-public class RoleServiceImpl implements RoleService{
+public class RoleServiceImpl implements RoleService {
 
     private final RoleRepository roleRepository;
 
@@ -16,53 +17,34 @@ public class RoleServiceImpl implements RoleService{
         this.roleRepository = roleRepository;
     }
 
-    /**
-     * @param role
-     */
     @Override
     public void save(Role role) {
-
+        roleRepository.save(role);
     }
 
-    /**
-     * @return
-     */
     @Override
     public List<Role> findAll() {
-        return null;
+        return roleRepository.findAll();
     }
 
-    /**
-     * @param id
-     * @return
-     */
     @Override
     public Role findById(long id) {
-        return null;
+        return roleRepository.findById(id).get();
     }
 
-    /**
-     * @param name
-     * @return
-     */
     @Override
     public Role findByName(String name) {
-        return null;
+        return roleRepository.findByName(name).get();
     }
 
-    /**
-     * @param role
-     */
     @Override
     public void update(Role role) {
-
+        roleRepository.save(role);
     }
 
-    /**
-     * @param id
-     */
     @Override
     public void deleteById(long id) {
-
+        if (roleRepository.findById(id).isPresent())
+            roleRepository.deleteById(id);
     }
 }
